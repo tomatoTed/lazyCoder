@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lazyCoder-config>
+    <!--
+            配置工程目录
+    type决定了生成文件内的属性和方法，选项为：controller,service,service-interface,serviceImpl,Dao,Dao-interface,DaoImpl
+    alias为别名，即最终写入工程目录的名字比如:
+    <path type="controller" alias="Controller">com/lazyCoder/controller</path>
+            为user实体类最终生成的文件为:com.lazyCoder.controller.userController.java
+    -->
+    <pathConfig>
+        <path alias="Controller" dest="com/lazyCoder/controller" type="controller"/>
+        <path alias="Service" dest="com/lazyCoder/service" type="service"/>
+        <path  dest="com/lazyCoder/Dao" type="Dao"/>
+    </pathConfig>
+    <!--配置工程实体-->
+    <entityMap>
+        <entity alias="user" dest="com/lazyCoder/entity/user.java"/>
+    </entityMap>
+    <!--配置工程使用的框架
+    type类型：ibatis,spring-mvc-->
+    <frameworkConfig>
+        <framework name="ibatis" version="2.3.0.677"/>
+    </frameworkConfig>
+</lazyCoder-config>
